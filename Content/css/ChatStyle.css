@@ -1,0 +1,1790 @@
+﻿@media screen and (max-width: 500px) and (min-width: 200px) {
+    .top-buffer {
+        margin-top: 4px !important;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 200px) {
+    #TournTopHdrDiv {
+        display: none;
+    }
+
+    #TournTopDownHdrDiv {
+        max-height: 22px !important;
+        height: 22px !important;
+        padding-left: 2px !important;
+        padding-right: 0px !important;
+        padding-top: 0px !important;
+    }
+
+    #leftStatus {
+        min-width: 342px;
+        max-width: 450px;
+    }
+
+    #TournTopDownHdrAfter {
+        display: none;
+    }
+
+    #TournTopDownHdr {
+        margin-left: 1px !important;
+        padding-left: 1px !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        max-height: 24px !important;
+    }
+
+    #TournTopDownHdrT {
+        max-height: 22px !important;
+    }
+
+    .Tourn3BtnsDiv {
+        max-width: 350px;
+        margin-right: 3px;
+        padding-right: 3px;
+        margin-left: 5px;
+        height: 32px;
+        font-size: 12px;
+        font-weight: normal;
+        margin-bottom: 2px;
+        margin-top: 3px;
+    }
+
+    .TournBtn {
+        max-width: 90px !important;
+        min-width: 75px !important;
+        font-size: 12px !important;
+        padding-left: 5px !important;
+        max-height: 25px !important;
+        padding-top: 3px !important;
+        font-weight: 600 !important;
+    }
+
+    #ChessPM {
+        font-size: 17px !important;
+        display: inline;
+        padding-left: 0px !important;
+        margin-left: -7px !important;
+    }
+
+    #ChessPMwrap {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    #ChessPMLogo {
+        max-height: 28px;
+        max-width: 28px;
+    }
+
+
+
+    #lockunlock {
+        display: inline;
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 6px;
+        margin-top: 3px;
+    }
+
+    #leftStatus {
+        max-height: 60px !important;
+        min-height: 60px !important;
+    }
+
+    #divLogged {
+        max-height: 46px !important;
+        min-height: 46px !important;
+    }
+
+    #logwrap {
+        max-height: 36px !important;
+        overflow: hidden;
+    }
+
+    #spanhdrwrap {
+        max-height: 36px !important;
+        overflow: hidden;
+    }
+
+    #servstat {
+        padding-left: 3px;
+    }
+
+    #tournmenudrop {
+        font-weight: 500;
+        padding-top: 8px !important;
+    }
+
+    #usermenudrop {
+        font-weight: 500;
+        padding-top: 8px !important;
+    }
+
+    #loginHelp {
+        font-size: 11px;
+    }
+
+    .LogBtn {
+        max-width: 80px !important;
+    }
+    /*#loghdr {display:none;}
+#spanhdr {display:none;}*/
+}
+
+@media screen and (max-width: 219px) and (min-width: 200px) {
+    #board2 {
+        width: 188px;
+    }
+
+    .chat2 {
+        width: 188px;
+    }
+
+    .PlayerTime {
+        width: 188px;
+    }
+
+    .messageBar {
+        width: 188px;
+    }
+
+    #divgamesbtn {
+        max-width: 172px !important;
+    }
+
+    #divusers {
+        max-width: 188px !important;
+    }
+
+    #divgames {
+        max-width: 188px !important;
+    }
+
+    #chatWindow {
+        max-width: 188px !important;
+    }
+
+    .loginchat {
+        max-width: 188px !important;
+    }
+}
+
+@media screen and (max-width: 239px) and (min-width: 220px) {
+    #board2 {
+        width: 212px;
+    }
+
+    .chat2 {
+        width: 212px;
+    }
+
+    .PlayerTime {
+        width: 212px;
+    }
+
+    .messageBar {
+        width: 212px;
+    }
+
+    #divgamesbtn {
+        max-width: 196px !important;
+    }
+
+    #divusers {
+        max-width: 212px !important;
+    }
+
+    #divgames {
+        max-width: 212px !important;
+    }
+
+    #chatWindow {
+        max-width: 212px !important;
+    }
+
+    .loginchat {
+        max-width: 212px !important;
+    }
+}
+
+@media screen and (max-width: 259px) and (min-width: 240px) {
+    #board2 {
+        width: 228px !important;
+    }
+
+    .chat2 {
+        width: 228px;
+    }
+
+    .PlayerTime {
+        width: 228px;
+    }
+
+    .messageBar {
+        width: 228px;
+    }
+
+    #divgamesbtn {
+        max-width: 220px !important;
+    }
+
+    #divusers {
+        max-width: 228px !important;
+    }
+
+    #divgames {
+        max-width: 228px !important;
+    }
+
+    #chatWindow {
+        max-width: 228px !important;
+    }
+
+    .loginchat {
+        max-width: 228px !important;
+    }
+}
+
+@media screen and (max-width: 279px) and (min-width: 260px) {
+    #board2 {
+        width: 244px !important;
+    }
+
+    .PlayerTime {
+        width: 244px;
+    }
+
+    .chat2 {
+        width: 244px;
+    }
+
+    .messageBar {
+        width: 244px;
+    }
+
+    #divgamesbtn {
+        max-width: 230px !important;
+    }
+
+    #divusers {
+        max-width: 244px !important;
+    }
+
+    #divgames {
+        max-width: 244px !important;
+    }
+
+    #chatWindow {
+        max-width: 244px !important;
+    }
+
+    .loginchat {
+        max-width: 244px !important;
+    }
+}
+
+@media screen and (max-width: 299px) and (min-width: 280px) {
+    #board2 {
+        width: 268px !important;
+    }
+
+    .chat2 {
+        width: 268px;
+    }
+
+    .PlayerTime {
+        width: 268px;
+    }
+
+    .messageBar {
+        width: 268px;
+    }
+
+    #divgamesbtn {
+        max-width: 250px !important;
+    }
+
+    #divusers {
+        max-width: 268px !important;
+    }
+
+    #divgames {
+        max-width: 268px !important;
+    }
+
+    #chatWindow {
+        max-width: 268px !important;
+    }
+
+    .loginchat {
+        max-width: 268px !important;
+    }
+}
+
+@media screen and (max-width: 319px) and (min-width: 300px) {
+    #board2 {
+        width: 284px !important;
+    }
+
+    .chat2 {
+        width: 284px;
+    }
+
+    .PlayerTime {
+        width: 284px;
+    }
+
+    .messageBar {
+        width: 284px;
+    }
+
+    #divgamesbtn {
+        max-width: 270px !important;
+    }
+
+    #divusers {
+        max-width: 284px !important;
+    }
+
+    #divgames {
+        max-width: 284px !important;
+    }
+
+    #chatWindow {
+        max-width: 284px !important;
+    }
+
+    .loginchat {
+        max-width: 284px !important;
+    }
+}
+
+@media screen and (max-width: 339px) and (min-width: 320px) {
+    #board2 {
+        width: 308px;
+    }
+
+    .chat2 {
+        width: 308px;
+    }
+
+    .PlayerTime {
+        width: 308px;
+    }
+
+    .messageBar {
+        width: 308px;
+    }
+
+    #divgamesbtn {
+        max-width: 290px !important;
+    }
+
+    #divusers {
+        max-width: 308px !important;
+    }
+
+    #divgames {
+        max-width: 308px !important;
+    }
+
+    #chatWindow {
+        max-width: 308px !important;
+    }
+
+    .loginchat {
+        max-width: 308px !important;
+    }
+}
+
+@media screen and (max-width: 359px) and (min-width: 340px) {
+    #board2 {
+        width: 324px !important;
+        max-width: 324px !important;
+        margin-left: 2px !important;
+    }
+
+    .chat2 {
+        width: 324px;
+    }
+
+    .PlayerTime {
+        width: 324px;
+    }
+
+    .messageBar {
+        width: 324px;
+        margin-left: 2px !important;
+    }
+
+    #divgamesbtn {
+        max-width: 310px !important;
+    }
+
+    #divusers {
+        max-width: 324px !important;
+        margin-left: 2px !important;
+    }
+
+    #divgames {
+        max-width: 324px !important;
+        margin-left: 2px !important;
+    }
+
+    #chatWindow {
+        max-width: 324px !important;
+        margin-left: 2px !important;
+    }
+
+    .loginchat {
+        max-width: 324px !important;
+        margin-left: 2px !important;
+    }
+}
+
+@media screen and (max-width: 379px) and (min-width: 360px) {
+    #board2 {
+        width: 348px !important;
+        max-width: 356px !important;
+    }
+
+    .chat2 {
+        width: 348px;
+    }
+
+    .PlayerTime {
+        width: 348px;
+    }
+
+    .messageBar {
+        width: 348px;
+    }
+
+    #divgamesbtn {
+        max-width: 330px !important;
+    }
+
+    #divusers {
+        max-width: 348px !important;
+    }
+
+    #divgames {
+        max-width: 348px !important;
+    }
+
+    #chatWindow {
+        max-width: 348px !important;
+    }
+
+    .loginchat {
+        max-width: 348px !important;
+    }
+}
+
+@media screen and (max-width: 399px) and (min-width: 380px) {
+    #board2 {
+        width: 364px !important;
+        max-width: 364px !important;
+    }
+
+    .chat2 {
+        width: 364px;
+    }
+
+    .PlayerTime {
+        width: 364px !important;
+    }
+
+    .messageBar {
+        width: 364px;
+    }
+
+    #divgamesbtn {
+        max-width: 350px !important;
+    }
+
+    #divusers {
+        max-width: 364px !important;
+    }
+
+    #divgames {
+        max-width: 364px !important;
+    }
+
+    #chatWindow {
+        max-width: 364px !important;
+    }
+
+    .loginchat {
+        max-width: 364px !important;
+    }
+}
+
+@media screen and (max-width: 449px) and (min-width: 400px) {
+    #board2 {
+        width: 372px !important;
+        max-width: 364px !important;
+    }
+
+    .chat2 {
+        width: 372px;
+    }
+
+    .PlayerTime {
+        width: 372px !important;
+    }
+
+    .messageBar {
+        width: 372px;
+    }
+
+    #divgamesbtn {
+        max-width: 354px !important;
+    }
+
+    #divusers {
+        max-width: 372px !important;
+    }
+
+    #divgames {
+        max-width: 372px !important;
+    }
+
+    #chatWindow {
+        max-width: 372px !important;
+    }
+
+    .loginchat {
+        max-width: 372px !important;
+    }
+}
+
+@media screen and (max-width: 449px) and (min-width: 180px) {
+    #playersdiv {
+        margin-left: 3px;
+    }
+
+    #gamesdiv {
+        margin-left: 3px;
+    }
+
+    #board2 {
+        margin-left: 2px !important;
+    }
+
+    #divgames {
+        margin-left: 8px !important;
+    }
+
+    #mychat {
+        margin-left: 9px;
+    }
+
+    .PlayerTime {
+        margin-left: 2px !important;
+    }
+
+    .messageBar {
+        margin-left: 2px !important;
+    }
+
+    #body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
+
+}
+
+
+@media screen and (min-width: 450px) {
+    #divusers {
+        max-width: 372px !important;
+        width: 372px !important;
+    }
+
+    #divgames {
+        max-width: 372px !important;
+        width: 372px !important;
+    }
+
+    #playersdiv {
+        /*max-width: 372px !important;*/
+        margin-left: 7px;
+    }
+
+    #gamesdiv {
+        margin-left: 10px;
+    }
+
+    #mychat {
+        margin-left: 15px;
+    }
+    /*PlayerTime*/
+}
+
+@media only screen and (min-width: 800px) {
+    #lockunlock {
+        display: none;
+    }
+
+    #TournTopHdrDiv {
+        display: inline;
+    }
+
+    #TournTopDownHdrDiv {
+        display: inline;
+    }
+
+    #TournTopDownHdr {
+        font-size: 18px;
+    }
+
+    .Tourn3BtnsDiv {
+        max-width: 400px;
+        margin-right: 3px;
+        padding-right: 3px;
+        margin-left: 5px;
+        height: 50px;
+        font-weight: bold;
+        margin-bottom: 4px;
+        margin-top: 3px;
+    }
+    /*.PlayerTime {margin-left:0px !important;}*/
+    #board2 {
+        margin-left: 5px !important;
+    }
+
+    #mychat {
+        margin-left: 12px;
+    }
+
+    #tournmenudrop {
+        font-weight: 600;
+        padding-top: 8px !important;
+    }
+
+    #usermenudrop {
+        font-weight: 600;
+        padding-top: 8px !important;
+    }
+
+    .TournBtn {
+        min-width: 90px !important;
+       
+    }
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.btn-fb {
+    color: #fff !important;
+    background-color: #3b5998;
+}
+
+a .game {
+    font-size: 12px !important;
+    color:#444;
+    font-weight:500;
+}
+a .enggame {
+    font-size: 12px !important;
+    color:#764;
+    font-weight:500;
+}
+
+#header {
+    padding: 20px;
+    background-color: #d7e5e4;
+    border-bottom: #5f9482 solid 2px;
+    color: #1e4638;
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    #ChessPM :before {
+        content: 'Play Chess by ';
+    }
+}
+
+/** {
+box-sizing: border-box;
+}*/
+/*.row:after {
+content: "";
+clear: both;
+display: block;
+}*/
+/* For mobile phones: */
+/*[class*="col-"] {
+width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  
+.col-m-1 {width: 8.33%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33%;}
+.col-m-5 {width: 41.66%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33%;}
+.col-m-8 {width: 66.66%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66%;}
+.col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+   
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}*/
+
+
+/*@media (max-width: @screen-sm) {
+[class*="col-"] {
+padding-left: 0 !important;
+padding-right: 0;
+}
+.row {
+margin-left: 0 !important;
+margin-right: 0;
+}
+.container-fluid {
+margin: 0;
+padding: 0;
+}
+}*/
+a.red:link {
+    color: #f00;
+}
+
+a.red:visited {
+    color: #f88;
+}
+
+a.red:hover {
+    color: #fbb;
+}
+
+a.brown:link {
+    color: #840;
+}
+
+a.brown:visited {
+    color: #840;
+}
+
+a.brown:hover {
+    color: #866;
+}
+
+.h {
+    direction: rtl !important;
+    /*float:right !important;*/
+}
+
+.loginchat {
+    /*width: 360px;*/
+    /*margin-left: auto;
+margin-right: auto;*/
+    padding: 10px;
+    border: solid 2px #5f9482;
+    color: #1e4638;
+}
+
+    .loginchat .textBox {
+        /*width: 50%;*/
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-right: 10%;
+        margin-left: 2%;
+    }
+    /*.loginchat .checkbox
+{
+width: 30%;  
+margin-top:8px;
+margin-bottom:5px;
+margin-right:10%;
+margin-left:10%;
+}*/
+
+    .loginchat ul.checkbox {
+        margin: 0;
+        padding: 0;
+        margin-left: 25px;
+        list-style: none;
+        /*width: 30%;*/
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+
+        .loginchat ul.checkbox li input {
+            margin-right: .25em;
+        }
+
+    .loginchat #divButton {
+        /*padding: 4px;
+text-align: right;*/
+    }
+
+.userRoom {
+    width: 250px;
+    /*
+margin-left: auto;
+margin-right: auto;
+*/
+    border: solid 1px gray;
+    clear: both;
+}
+
+    .userRoom .content {
+        height: 200px; /*300px;*/
+        clear: both;
+    }
+
+.chatRoom {
+    width: 280px; /*360px;*/
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px gray;
+}
+
+.messageBar {
+    margin-left: 5px;
+    max-width: 372px;
+    /*height: 40px;*/
+    clear: both;
+}
+
+    .messageBar .msg, .mmsg {
+        background: #faf7f4;
+        font-size: 15px;
+        font-weight: bold;
+        color: red;
+        border-radius: 0px 0px 8px 8px;
+        padding: 4px;
+        /*  background-color: #fff; */
+        border-bottom: solid 1px #828282;
+        border-left: solid 1px #828282;
+        border-right: solid 1px #828282;
+    }
+
+.PlayerTime {
+    /*margin-left:4%;*/
+    margin: auto;
+    margin-left: 5px;
+    padding-top: 5px;
+    max-width: 372px;
+    border: solid 1px #777;
+    border-radius: 6px;
+    /* margin-left: auto;
+margin-right: auto;
+     
+border: solid 1px gray;
+    */
+}
+
+    .PlayerTime .content {
+        height: 25px;
+        clear: both;
+        display: table;
+    }
+
+        .PlayerTime .content .PName {
+            width: 238px;
+            font-size: 15px;
+            font-weight: bold;
+            padding-left: 6px;
+            /*background-color: #eae7e4;*/
+            border-bottom: solid 1px #cac7c4;
+            display: table-cell;
+        }
+
+        .PlayerTime .content .PScore {
+            width: 54px;
+            font-size: 13px;
+            color: #554;
+            font-weight: normal;
+            padding-left: 2px;
+            padding-right: 5px;
+            /*background-color: #eae7e4;*/
+            border-bottom: solid 1px #cac7c4;
+            display: table-cell;
+        }
+
+        .PlayerTime .content .PTime {
+            width: 100px;
+            font-size: 15px;
+            font-weight: bold;
+            padding-right: 4px;
+            padding-left: 4px;
+            /*background-color: #eae7e4;*/
+            border-bottom: solid 1px #cac7c4;
+            /*border: solid 1px #5f9482;*/
+            display: table-cell;
+        }
+
+        .PlayerTime .content .PMove {
+            min-width: 18px;
+            padding-right: 2px;
+            /*background-color: #eae7e4;*/
+            border-bottom: solid 1px #cac7c4;
+            display: table-cell;
+        }
+
+.top-buffer {
+    margin-top: 8px;
+}
+
+.submitButton {
+    min-width: 82px !important;
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+    .submitButton:hover {
+        background-color: #e1e1e1;
+    }
+
+.teachbtn {
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    min-width: 120px !important;
+    max-width: 140px !important;
+    height: 40px !important;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px !important;
+    cursor: pointer;
+    color: #334;
+}
+
+    .teachbtn:hover {
+        background-color: #e1e1e1;
+    }
+
+.mybtnLong {
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    min-width: 120px !important;
+    max-width: 120px !important;
+    height: 40px !important;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px !important;
+    cursor: pointer;
+    color: #223;
+}
+
+    .mybtnLong:hover {
+        background-color: #e1e1e1;
+    }
+
+    .mybtnLong:focus {
+        background-color: #e7f5f4;
+    }
+
+.mybtn {
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    min-width: 80px !important;
+    max-width: 90px !important;
+    height: 40px !important;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px !important;
+    cursor: pointer;
+    color: #334;
+}
+
+    .mybtn:hover {
+        background-color: #e1e1e1;
+    }
+
+.mybtnSm {
+    background-color: #d7e5e4;
+    border: #5f9482 solid 1px;
+    min-width: 140px;
+    height: 30px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.chatRoom .title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #d7e5e4;
+    border-bottom: solid 1px #5f9482;
+}
+
+.cheader {
+    color: #454545;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+    *display: inline; /* for IE7*/
+    *zoom: 1; /* for IE7*/
+    min-width: 70px;
+    /*text-align:center;*/
+    padding-left: 12px;
+    padding-top: 3px;
+    width: 360px;
+}
+
+.cheadersm {
+    color: #454545;
+    font-weight: 300;
+    font-size: 11px;
+    display: inline-block;
+    *display: inline; /* for IE7*/
+    *zoom: 1; /* for IE7*/
+    min-width: 60px;
+    /*text-align:center;*/
+    padding-left: 8px;
+    padding-top: 1px;
+}
+
+.hdrline {
+    color: #727272;
+    /*font-size:14px;*/
+}
+
+.chatRoom .content {
+    height: 300px;
+    clear: both;
+}
+
+.chatWindow {
+    background: #faf7f4;
+    height: 300px;
+    border: solid 1px #5f9482;
+    /*border-right: solid 1px #5f9482;*/
+    overflow-y: scroll;
+}
+
+    .chatWindow .message {
+        padding: 4px;
+    }
+
+        .chatWindow .message .userName {
+            font-weight: bold;
+        }
+
+/*#divusers { 
+            width:360px;
+
+        }*/
+.games {
+    background: #faf7f4;
+    margin-top: 0px;
+    border: solid 1px #5f9482;
+    height: 144px; /*206px 253px;*/
+    overflow-y: scroll;
+    padding: 0px;
+    border-right: solid 2px #5f9482;
+    margin-left: 8px;
+    /*max-width:372px;*/
+    width: 360px;
+}
+
+
+    .games .game {
+        font-size: 12px !important;
+        height: 22px;  
+        overflow-x: no-display;
+        display: block;
+        cursor: pointer;
+        padding: 2px 2px 2px 2px;
+
+        background-color: #faf7f4;        
+        text-decoration: none;
+    }
+     .games .enggame {
+        font-size: 12px !important;
+        height: 22px;  
+        overflow-x: no-display;
+        display: block;
+        cursor: pointer;
+        padding: 2px 2px 2px 2px;
+
+        background-color: #faf7f4;        
+        text-decoration: none;
+    }
+
+/*.games .game:hover
+    {
+        background-color: #e1e1e1;
+    }*/
+/*.games .selgame
+    {
+        background-color: #b1b1b1;
+    }*/
+
+.users {
+    background: #faf7f4;
+    margin-top: 4px;
+    border: solid 1px #5f9482;
+    height: 170px; /*206px;*/ /* 190px;300px;*/
+    overflow-y: scroll;
+    padding: 0px;
+    max-width:380px;
+    width:360px;
+    margin-left: 8px;
+}
+   
+  
+    .users .user {
+        display: block;
+        cursor: pointer;
+        padding: 2px 2px 2px 2px;
+        background-color: #f9f9f9;
+        font-size: 12px;
+  
+    }
+
+    .users .loginUser {
+        display: block;
+        padding: 2px 4px 2px 4px;
+        color: gray;
+        border-bottom: solid 1px #5f9482;
+    }
+
+/* .content */
+ 
+
+.chatdiv {
+    background: #faf7f4;
+    border: solid 1px #5f9482;
+    border-right: solid 2px #5f9482;
+    height: 190px; /*300px;*/
+    overflow-y: scroll;
+    padding: 8px;
+    margin-left: 12px; /*margin-right:5px;*/
+    margin-top: 2px;
+    font-size: 13px;
+    max-width: 380px;
+}
+
+.chatRoom .messageBar {
+    border-top: solid 1px gray;
+    padding: 4px;
+}
+
+    .chatRoom .messageBar .textbox {
+        width: 250px;
+    }
+
+.disconnect, .disconnecte {
+    position: absolute;
+    margin: 10px;
+    background-color: #ffcbcb;
+    color: red;
+    padding: 4px;
+    border: solid 1px red;
+    font-family: Arial;
+}
+
+.disconnecth {
+    position: absolute;
+    margin: 10px;
+    background-color: #ffcbcb;
+    color: red;
+    padding: 4px;
+    border: solid 1px red;
+    font-family: Arial;
+    direction: rtl;
+    text-align: right;
+}
+
+.msgblue, .msgbluee {
+    position: absolute;
+    margin: 10px;
+    background-color: #fff;
+    color: #44f;
+    padding: 4px;
+    border: solid 1px blue;
+    font-family: Arial;
+}
+
+.msgblueh {
+    position: absolute;
+    margin: 10px;
+    background-color: #fff;
+    color: #44f;
+    padding: 4px;
+    border: solid 1px blue;
+    font-family: Arial;
+    direction: rtl;
+    text-align: right;
+}
+
+.msgblues, .msgbluese {
+    position: absolute;
+    margin: 10px;
+    background-color: #fff;
+    color: #44f;
+    padding: 4px;
+    border: solid 1px blue;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.msgbluesh {
+    position: absolute;
+    margin: 10px;
+    background-color: #fff;
+    color: #44f;
+    padding: 4px;
+    border: solid 1px blue;
+    font-family: Arial;
+    direction: rtl;
+    text-align: right;
+    font-size: 13px;
+}
+
+.draggable {
+    position: absolute;
+    border: #5f9482 solid 1px !important;
+    width: 250px;
+}
+
+    .draggable .header {
+        cursor: move;
+        background-color: #d7e5e4;
+        border-bottom: #5f9482 solid 1px;
+        color: #1e4638;
+    }
+
+    .draggable .selText {
+        color: black;
+        padding: 4px;
+    }
+
+    .draggable .messageArea {
+        width: 250px;
+        overflow-y: scroll;
+        height: 190px;
+        border-bottom: #5f9482 solid 1px;
+    }
+
+        .draggable .messageArea .message {
+            padding: 4px;
+        }
+
+    .draggable .buttonBar {
+        width: 250px;
+        padding: 4px;
+    }
+
+        .draggable .buttonBar .msgText {
+            width: 172px;
+        }
+
+        .draggable .buttonBar .button {
+            margin-left: 4px;
+            width: 55px;
+        }
+
+
+
+
+/*#nav {
+float: left;
+width: 280px;
+border-top: 1px solid #999;
+border-right: 1px solid #999;
+border-left: 1px solid #999;
+}
+#nav li a {
+display: block;
+padding: 10px 15px;
+background: #ccc;
+border-top: 1px solid #eee;
+border-bottom: 1px solid #999;
+text-decoration: none;
+color: #000;
+}
+#nav li a:hover, #nav li a.active {
+background: #999;
+color: #fff;
+}
+#nav li ul {
+display: none;   
+}
+#nav li ul li a {
+padding: 10px 25px;
+background: #ececec;
+border-bottom: 1px dotted #ccc;
+}*/
+
+
+
+
+.accordion-container {
+    margin: 0 0 2px;
+}
+
+.accordion-toggle {
+    position: relative;
+    display: block;
+    /*padding: 5px;*/
+    max-width: 22px;
+    /*font-size: 1.5em;
+font-weight: 300;*/
+    background: #e7f2f1;
+    color: #222;
+    text-decoration: none;
+}
+
+    .accordion-toggle:hover {
+        background: #e7c2c1;
+    }
+
+    .accordion-toggle.open {
+        background: #e7f2f1;
+    }
+
+    .accordion-toggle span.toggle-icon {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        /*font-size: 1.5em;*/
+    }
+
+.accordion-content {
+    display: none;
+    padding: 7px;
+    width: 120px;
+    min-width: 110px;
+    overflow: auto;
+    font-size: 15px;
+}
+
+    .accordion-content a {
+        border: solid 1px #999;
+        background-color: #fff;
+        color: #222;
+    }
+
+/*.moves_controls {
+min-width: 350px;
+}*/
+#moves {
+    overflow: hidden;
+    height: 195px; /*122px;*/
+    width: 185px; /*160px;*/
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.noteblock {
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0;
+    width: 175px; /*150px;*/
+    border: 0;
+    display: block;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+div.notation {
+    width: 173px; /* 148px; */
+    height: 190px; /*160px;*/
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-size: 12px;*/
+    /*font: inherit;*/
+    font-size: 11px;
+    vertical-align: baseline;
+    background: #faf7f4;
+    position: relative;
+    /*height: 93px;*/
+}
+
+div.notationVertical {
+    background: none repeat scroll 0 0 #faf7f4;
+    height: 20px !important;
+    overflow: hidden;
+    padding: 2px 0;
+}
+
+div.odd {
+    background: none repeat scroll 0 0 #e7e7e7;
+}
+
+
+    div.odd span {
+        border: 1px solid #e7e7e7;
+    }
+
+div.notationVertical span {
+    border: 1px solid #ffffff;
+    display: inline;
+    float: left;
+    height: 16px;
+    margin-right: 2px;
+    padding: 2px;
+    width: 57px; /* 41 */
+}
+
+    div.notationVertical span.num {
+        font-weight: bold;
+        text-align: right;
+        width: 20px;
+    }
+
+    div.notationVertical span a {
+        cursor: pointer;
+    }
+
+    div.notationVertical span a {
+        cursor: pointer;
+    }
+
+#notation a, #notation a:visited, .notation a, .notation a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.movesel {
+    border: 1px solid #c25;
+    background-color: #ecc;
+    color: #c25;
+}
+
+
+
+
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    /*background-image:url(background-trans.png);*/
+}
+
+    #overlay div {
+        width: 300px;
+        margin: 100px auto;
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 15px;
+        text-align: center;
+    }
+
+
+.resultTable {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    width: 90%;
+    /*height: 116px;*/
+    border: 1px solid #000000;
+    background-color: #f8f8f8;
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    display: table;
+    color: #222222;
+}
+
+
+
+
+    .resultTable tr {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: grey;
+        display: table-row;
+    }
+
+    .resultTable .oddrow {
+    }
+
+        .resultTable .oddrow td {
+        }
+
+    .resultTable .evenrow {
+        background-color: #e8e7e6;
+    }
+
+        .resultTable .evenrow td {
+            background-color: #e8e7e6;
+        }
+
+    .resultTable th, td {
+        padding: 8px 10px;
+        display: table-cell;
+    }
+
+    .resultTable .tabhead {
+        background-color: #769656;
+        color: #ffffff;
+    }
+
+    .resultTable .tabheadcell {
+        background-color: #769656;
+        color: #ffffff;
+    }
+
+    .resultTable td {
+        vertical-align: top;
+        color: #32302d;
+        margin: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+    }
+
+.modal-open {
+    overflow: scroll;
+}
+.ui-dialog {
+    overflow: scroll;
+}
+#myModalFullResults {
+    overflow-y: auto !important;
+}
+.myModalPairings {
+    overflow-y: auto !important;
+}
+#myModalResults {
+    overflow-y: auto !important;
+}
+.ui-dialog ui-widget ui-widget-content ui-corner-all{
+        	/*height: 271px;*/
+        	overflow-y: auto;
+        }
+
+.close1 {
+    /* position: absolute; */
+    top: 20px;
+right: 30px; left:30px;
+    transition: all 200ms;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #fff !important;
+    color: #555 !important;
+    border: 0;
+}
+
+
+
+
+.portlet {
+    margin-bottom: 15px;
+}
+
+.btn-white {
+    border-color: #cccccc;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.portlet {
+    border: 1px solid;
+}
+
+    .portlet .portlet-heading {
+        padding: 0 15px;
+    }
+
+        .portlet .portlet-heading h4 {
+            padding: 1px 0;
+            font-size: 16px;
+        }
+
+        .portlet .portlet-heading a {
+            color: #fff;
+        }
+
+            .portlet .portlet-heading a:hover,
+            .portlet .portlet-heading a:active,
+            .portlet .portlet-heading a:focus {
+                outline: none;
+            }
+
+    .portlet .portlet-widgets .dropdown-menu a {
+        color: #333;
+    }
+
+    .portlet .portlet-widgets ul.dropdown-menu {
+        min-width: 0;
+    }
+
+    .portlet .portlet-heading .portlet-title {
+        float: left;
+    }
+
+        .portlet .portlet-heading .portlet-title h4 {
+            margin: 10px 0;
+        }
+
+    .portlet .portlet-heading .portlet-widgets {
+        float: right;
+        margin: 8px 0;
+    }
+
+        .portlet .portlet-heading .portlet-widgets .tabbed-portlets {
+            display: inline;
+        }
+
+        .portlet .portlet-heading .portlet-widgets .divider {
+            margin: 0 5px;
+        }
+
+    .portlet .portlet-body {
+        padding: 15px;
+        background: #fff;
+    }
+
+    .portlet .portlet-footer {
+        padding: 10px 15px;
+        background: #e0e7e8;
+    }
+
+        .portlet .portlet-footer ul {
+            margin: 0;
+        }
+
+.portlet-green,
+.portlet-green > .portlet-heading {
+    border-color: #16a085;
+}
+
+    .portlet-green > .portlet-heading {
+        color: #fff;
+        background-color: #16a085;
+    }
+
+.portlet-orange,
+.portlet-orange > .portlet-heading {
+    border-color: #f39c12;
+}
+
+    .portlet-orange > .portlet-heading {
+        color: #fff;
+        background-color: #f39c12;
+    }
+
+.portlet-blue,
+.portlet-blue > .portlet-heading {
+    border-color: #2980b9;
+}
+
+    .portlet-blue > .portlet-heading {
+        color: #fff;
+        background-color: #2980b9;
+    }
+
+.portlet-red,
+.portlet-red > .portlet-heading {
+    border-color: #e74c3c;
+}
+
+    .portlet-red > .portlet-heading {
+        color: #fff;
+        background-color: #e74c3c;
+    }
+
+.portlet-purple,
+.portlet-purple > .portlet-heading {
+    border-color: #8e44ad;
+}
+
+    .portlet-purple > .portlet-heading {
+        color: #fff;
+        background-color: #8e44ad;
+    }
+
+.portlet-default,
+.portlet-dark-blue,
+.portlet-default > .portlet-heading,
+.portlet-dark-blue > .portlet-heading {
+    border-color: #34495e;
+}
+
+    .portlet-default > .portlet-heading,
+    .portlet-dark-blue > .portlet-heading {
+        color: #fff;
+        background-color: #34495e;
+    }
+
+.portlet-basic,
+.portlet-basic > .portlet-heading {
+    border-color: #333;
+}
+
+    .portlet-basic > .portlet-heading {
+        border-bottom: 1px solid #333;
+        color: #333;
+        background-color: #fff;
+    }
+
+@media(min-width:768px) {
+    .portlet {
+        margin-bottom: 30px;
+    }
+}
+
+.img-chat {
+    width: 40px;
+    height: 40px;
+}
+
+.text-green {
+    color: #16a085;
+}
+
+.text-orange {
+    color: #f39c12;
+}
+
+.text-red {
+    color: #e74c3c;
+}
+

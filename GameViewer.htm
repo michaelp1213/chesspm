@@ -1,0 +1,201 @@
+﻿<html lang="en" class="" style="background:#dddddd">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <meta name="description" content="ChessPM Viewer - PGN Chess Games Viewer" />
+  <meta name="keywords" content="ChessPM Viewer - PGN Chess Games Viewer" />
+
+  <title>ChessPM Viewer - PGN Chess Games Viewer</title>
+
+  <meta name="robots" content="index, follow" />
+
+
+  <meta name="title" content="ChessPM Viewer - PGN Chess Games Viewer" />
+  <meta name="robots" content="all" />
+
+  <meta property="og:title" content="ChessPM Viewer - PGN Chess Games Viewer" />
+
+  <meta property="og:description" content="Chess game Viewer" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+
+
+  <link rel="shortcut icon" href="">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+  <link href="./Content/css/pgnviewer_mc.css" rel="stylesheet" />
+  <link href="./Content/css/chessboard_mc_-0.3.0.css" rel="stylesheet" />
+
+  <link href="./Content/css/c24my.css" rel="stylesheet" />
+
+
+  <script src="./Scripts/chessboard-5.0.0.js"></script>
+
+
+  <script src="./Scripts/chess.js"></script>
+
+  <script src="./Scripts/html2canvas.min.js"></script>
+  <script src="./pl/jsPlumb-2.0.4.min.js"></script>
+   
+
+  <style>
+    .lock-screen {
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+      position: fixed;
+    }
+
+    html, body {
+      margin: 5;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* 🚫 no scrollbars */
+    }
+  </style>
+
+
+  <script src="./js/params.js"></script>
+
+  <script src="./js/miscfuncs.js"></script>
+  <script src="./js/setgame0.js"></script>
+  <script src="./js/setgame1.js"></script>
+  <script src="./js/setgame2.js"></script>
+
+
+  <script src="./js/saveload.js"></script>
+
+  <script src="./js/dragmove.js"></script>
+  <script src="./js/recording.js"></script>
+
+
+  <script src="./js/gameviewer.js"></script>
+
+
+</head>
+
+
+<body id="body1" style="background:#d5d5d5">
+
+
+
+
+  <div id="board_html_repl" class="col-sm-6" style="display:none;">
+
+
+  </div>
+
+
+
+
+
+
+  <div id="board_html1" class="boardbackc">
+
+    <div id="board_html_set" style="display:none;"></div>
+
+
+
+
+    <div id="PlayerBlackInMove" class="PMove PBlack" style="display:none; ">
+      <img id="PlayerBlackInMoveImg" src="/Content/img/BULLET1.GIF" style="">
+    </div>
+    <div id="PlayerWhiteInMove" class="PMove PWhite" style="display:none;">
+      <img id="PlayerWhiteInMoveImg" src="/Content/img/BULLET1.GIF" style="">
+    </div>
+
+    <div id="board" style="max-width:396px;max-height:396px;margin-left:3px;">
+
+    </div>
+
+
+
+    <div id="overlay" style="visibility:hidden;top:5px;left:7px;z-index:1000000;max-width:200px;max-height:100px;">
+      <div id="overlayimg">
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div id="game_html" style="display:none;visibility:hidden;">
+
+    <div id="linkhdr" style="font-size:14px;"></div>
+
+    <div id="game_moves_html_wrap" style="visibility:hidden;">
+      <div id="game_moves_html_wrap2" style="height: inherit; overflow-y: scroll;overflow-x:hidden; webkit-overflow-scrolling:touch;">
+        <div id="game_moves_html">
+          <div id="timer2" class="timer" style="margin:auto;margin-left:30px;">Wait...&nbsp;&nbsp;<img src="./Images/progr24.gif" /></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+
+      function isTestMode() {
+        return location.search.indexOf("test=1") !== -1;
+      }
+
+      if (!isTestMode())
+        return;
+
+      function onReady(fn) {
+        if (document.readyState === "loading")
+          document.addEventListener("DOMContentLoaded", fn);
+        else
+          fn();
+      }
+
+      onReady(function () {
+
+        // 1️⃣ Load test JS FIRST
+        var s = document.createElement("script");
+        s.src = "js/gameviewer.test.js";
+        s.onload = function () {
+
+          // 2️⃣ Load panel HTML AFTER JS is ready
+          fetch("GameViewer.TestPanel.htm")
+            .then(r => r.text())
+            .then(html => {
+              document.body.insertAdjacentHTML("beforeend", html);
+
+              // 3️⃣ Initialize panel
+              if (window.initFenPresets)
+                window.initFenPresets();
+            });
+        };
+
+        document.head.appendChild(s);
+
+      });
+
+    })();
+  </script>
+
+
+
+
+
+</body>
+
+
+</html>

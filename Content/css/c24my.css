@@ -1,0 +1,46 @@
+﻿.navigation {
+    /*position: absolute;*/
+    left: 0;
+    top: 0;
+    text-align:center !important; 
+     
+    /*margin:auto;*/
+    margin-bottom:2px;
+     margin-top:0px;
+}
+.cIcon, .prevGame , .nextGame , .gchooser {
+    display : inline;
+}
+.cIcon, a.like, a.unlike {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    padding-left: 22px;
+}
+.cBtn, .cIcon, .langIconRound, .tabNav>li a, a.like, a.unlike {
+    text-decoration: none!important;
+}
+.cIcon.cIconArrowL:before, a.cIconArrowL.like:before, a.cIconArrowL.unlike:before {
+    background-position: 0 -460px;
+}
+.cIcon.cIconArrowR:before, a.cIconArrowR.like:before, a.cIconArrowR.unlike:before {
+    background-position: -30px -460px;
+}
+.cIcon:before, a.like:before, a.unlike:before {
+    position: absolute;
+    display: block;
+    content: "\0020";
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: 0;
+    background: url(../img/ui_form_sprite.png) no-repeat;
+}
+
+.linex5c {
+    background-color:#eee; 
+    padding-left:2px;padding-right:2px; 
+     /*margin-left: 2px;margin-right:2px;*/
+    color:#222;font-weight:500;  cursor:pointer;
+}
