@@ -1,0 +1,80 @@
+﻿
+<div id="chessTestPanel" style="border:1px solid #999;padding:10px;width:720px;font-family:Arial">
+
+  <h3>Chess Board Test Panel</h3>
+  <div style="margin-bottom:6px">
+    <label>Prepared FEN:</label>
+    <select id="fenPreset" onchange="applyFenPreset()">
+      <option value="">-- select --</option>
+      <!--<option value="startpos">
+        Start position
+      </option>
+      <option value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1">
+        Initial (explicit)
+      </option>
+      <option value="r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3">
+        Open game sample
+      </option>-->
+    </select>
+  </div>
+
+  <!-- FENs -->
+  <div>
+    <label>FEN 1:</label><br />
+    <textarea id="fen1" rows="2" style="width:700px">rnbqkbnr/pp1ppppp/8/8/2pPP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3</textarea>
+  </div>
+
+  <div style="margin-top:5px">
+    <label>FEN 2:</label><br />
+    <textarea id="fen2" rows="2" style="width:700px"></textarea>
+  </div>
+
+  <!-- UCI / Squares -->
+  <div style="margin-top:8px">
+    <label>UCI / Square 1:</label>
+    <input id="uci1" type="text" style="width:80px" />
+
+    <label style="margin-left:20px">UCI / Square 2:</label>
+    <input id="uci2" type="text" style="width:80px" />
+  </div>
+
+  <!-- Side to move -->
+  <div style="margin-top:8px">
+    <label>
+      <input type="checkbox" id="whiteToMove" checked />
+      White to move
+    </label>
+  </div>
+
+  <!-- Delay -->
+  <div style="margin-top:8px">
+    <label>Delay (ms):</label>
+    <input id="delayMs" type="number" value="0" style="width:80px" />
+    <span>(0 / 500 / 1000 / 2000)</span>
+  </div>
+
+  <!-- Command -->
+  <div style="margin-top:8px">
+    <label>Command:</label>
+    <select id="commandType">
+      <option value="setfen">Set FEN</option>
+      <option value="setfen2">Set FEN 2</option>
+      <option value="setcolot">Set Play Color</option>
+      <option value="flip">Flip</option>
+      <option value="flipb">Flip to Black</option>
+      <option value="set2fen_highlight">Set 2 FENs + Highlight Square</option>
+      <option value="setfen_side_highlight">Set 1 FENs + side + Highlight Square</option>
+
+      <option value="show2moves">Show UCI Move 1 → Move 2</option>
+      <option value="show1move">Show UCI Move 1</option>
+      <option value="show1movespecial">Show UCI Move 1 Special</option>
+      <option value="highlight">Highlight Square</option>
+    </select>
+  </div>
+
+  <!-- Button -->
+  <div style="margin-top:12px">
+    <button onclick="runChessTest()">Run</button>
+  </div>
+
+</div>
