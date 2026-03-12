@@ -99,7 +99,7 @@ function overlay(wb, fromSquare, toSquare, takes) {
     // div.append("[<a href='#' onclick='overlay()'>close</a>]");
     var pcs = 'QRBN';
     for (i = 0; i < 4; i++) {
-        var st = ' <img src="/Content/img/chesspieces/wikipedia/' + wb + pcs[i] + '.png" style="width:40px;height:40px;cursor:pointer;" onclick="promote(\'' + pcs[i] + '\',\'' + wb + '\',\'' + fromSquare + '\',\'' + toSquare + '\',' + takes + ');" />';
+        var st = ' <img src="Content/img/chesspieces/wikipedia/' + wb + pcs[i] + '.png" style="width:40px;height:40px;cursor:pointer;" onclick="promote(\'' + pcs[i] + '\',\'' + wb + '\',\'' + fromSquare + '\',\'' + toSquare + '\',' + takes + ');" />';
         div.append(st);
     }
     el = document.getElementById("overlay");
@@ -631,3 +631,4 @@ setPuzzle = function (game, islist) {
 
     lockScreen();
 }
+
