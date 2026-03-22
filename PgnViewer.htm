@@ -1,0 +1,1133 @@
+﻿<html lang="en" class="" style="background:#dddddd">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="description" content="ChessPM Viewer - PGN Chess Games Viewer"/>
+    <meta name="keywords" content="ChessPM Viewer - PGN Chess Games Viewer"/>
+
+    <title>ChessPM Viewer - PGN Chess Games Viewer</title>
+
+    <meta name="robots" content="index, follow"/>
+
+
+    <meta name="title" content="ChessPM Viewer - PGN Chess Games Viewer" />
+    <meta name="robots" content="all" />
+    
+    <meta property="og:title" content="ChessPM Viewer - PGN Chess Games Viewer" />
+ 
+    <meta property="og:description" content="Chess game Viewer" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+
+    <!--"//www.chesspm.com/images/ChessBoard_213_178.jpg"//www.chesspm.com/" -->
+
+    <link rel="shortcut icon" href="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+
+    <link href="./Content/css/pgnviewer_mc.css" rel="stylesheet" />
+    <link href="./Content/css/chessboard_mc_-0.3.0.css" rel="stylesheet" />
+
+    <link href="./Content/css/c24my.css" rel="stylesheet" />
+
+   
+    <script src="./Scripts/chessboard-5.0.0.js"></script>
+
+    
+    <script src="./Scripts/chess.js"></script>
+
+    <script src="./Scripts/html2canvas.min.js"></script>
+
+    <script src="./Scripts/bootbox.min.js"></script>
+  
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- fancyBox main CSS -->
+    <link href="./Content/css/fancybox.css" type="text/css" rel="stylesheet" media="screen">
+    <!-- fancyBox - button helper CSS -->
+    <link href="./Content/css/fancybox-buttons.css" rel="stylesheet" type="text/css">
+    <!--Plugin JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <link href="./css/social.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .lock-screen {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+            position: fixed;
+        }
+    </style>
+
+    <script src="./js/params.js"></script>
+    
+    <script src="./js/miscfuncs.js"></script>
+    <script src="./js/setgame0.js"></script>
+    <script src="./js/setgame1.js"></script>   
+    <script src="./js/setgame2.js"></script>
+    
+    <script src="./js/board55.js"></script>
+
+    <script src="./js/anaysis.js"></script>
+    <script src="./js/saveload.js"></script>   
+    
+    <script src="./js/dragmove.js"></script>
+    <script src="./js/recording.js"></script>
+       
+    <script src="./js/dialogs.js"></script>
+
+    <script src="./js/loadstart.js"></script>
+    <script src="./js/events.js"></script>
+   
+
+    <script>
+  
+     
+    </script>
+  
+</head>
+
+
+<body id="body" style="background:#d5d5d5">
+    <div id="page-container">
+        <div class="row" id="noframehdr" style="display:none;margin:1px;margin-right:4px;margin-left:3px;">
+
+            <div id="spacer" class="col-xs-12 col-sm-12 col-lg-12 col-xl-12" style="height:32px;font-size:20px;font-weight:700;font-family:'Times New Roman';margin:auto;text-align:center;background-color:#eee;color:#333;border:2px solid #999;">
+               
+                C h e s s P M . c o m
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div id="timerhdr1" style="display:none;" class="col-sm-12">
+                <div id="timer1" class="timer1" style="margin:auto;margin-left:30px;margin-bottom:10px;">Wait...&nbsp;&nbsp;<img src="./Images/progr24.gif" /></div>
+            </div>
+
+        </div>
+
+        <div id="pgnviewer" class="row" style="background: #d5d5d5;">
+
+            <div id="board_html_repl" class="col-sm-6" style="display:none;">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        Engine Color:
+                        <select id="eng_color_chooser" class="form-control my-input">
+                            <option value="0" selected>Unspecified</option>
+                            <option value="1">White</option>
+                            <option value="2">Black</option>
+                        </select>
+
+
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+                        Start FEN: <input id="eng_start_fen" class="form-control my-input" />&nbsp;
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+                        Engine Time: <input id="eng_time" value="0_15_1" class="form-control my-input" />&nbsp;
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+                        <button id="eng_set_btn" type="button" class="form-control my-input btn btn-primary" style="margin-bottom:8px;">Set Params</button>
+
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+
+                        <button id="showhide_btn" type="button" class="form-control my-input btn btn-primary" style="margin-bottom:8px;">Show/Hide board</button>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div id="analyze_fen" style="color:#622;min-height:26px;font-size:10px;">&nbsp;</div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+
+                        Next Move: <input id="next_move" class="form-control my-input" />&nbsp;<button id="next_move_btn" class="form-control my-input">MAKE MOVE</button>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div id="analyze_res" style="color:#c22;min-height:26px;">&nbsp;</div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div id="board_anal_repl" class="col-sm-6 col-lg-4" style="display:none;">
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div id="gameanalyze_res" style="color:#522;min-height:180px;max-height:495px;overflow-y: scroll;">&nbsp;</div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="row">
+
+                            <div class="col-sm-5" id="analyze_res1" style="color:#c22;min-height:26px;margin-top:6px;">&nbsp;Result:&nbsp;</div>
+
+                            <div class="col-sm-7">
+                               
+                                <select id="anal_to_game_btn" class="selectpicker form-control my-input">
+                                    <option value="-1">Transfer option :</option>
+                                    <option value="0">Transfer now</option>
+                                    <option value="1">Transfer once</option>
+                                    <option value="2">Transfer always</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div id="game_save" class="col-sm-12 col-lg-4" style="display:none;margin-top:5px;">
+                <div class="row">
+
+                    <div class="col-sm-5 col-xs-5 col-lg-5 pgndiv" id="pgndiv">
+
+                        <select id="pgn_type" class="selectpicker form-control my-input" style="font-size:12px !important;">
+                            <option value="0">Pgn type:</option>
+                            <option value="1">Regular Pgn</option>
+                            <option value="2">YAML Pgn Solution</option>
+                            <option value="3">YAML Any Solution</option>
+                            <option value="4">Text</option>
+                            <option value="5">Unchecked Pgn</option>
+                            <option value="6">Pgn with [ ] brackets and ;</option>
+                            <option value="13">YAML with [ ] brackets</option>
+                            <option value="23">YAML Multiline</option>
+                        </select>
+
+                    </div>
+                    <div class="col-sm-5 col-xs-5 col-lg-5">
+
+
+                        <!--<input id="hidem" type="checkbox" />Hide-->
+                        <select id="hidem" class="selectpicker form-control my-input">
+                            <option value="-1">Show moves:</option>
+                            <option value="0" selected="selected">Show regular</option>
+                            <option value="1">Hidden all</option>
+                            <option value="10">Regular</option>
+                            <option value="11">Solve=1</option>
+                            <option value="12">Solve=2</option>
+                            <option value="13">Solve=3</option>
+                            <option value="100">Private</option>
+                        </select>
+
+
+
+                    </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-sm-5 col-xs-5 col-lg-5 pgndiv">
+
+                    <select id="b_col" class="selectpicker form-control my-input" style="font-size:12px !important;">
+                      <option value="-1">Default Color</option>
+
+                    </select>
+
+                  </div>
+                  <div class="col-sm-5 col-xs-5">
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                      <span style="font-size: 9px; white-space: nowrap;">Keys</span>
+                      <input id="keysval" data-placement="bottom" style="font-size: 12px; flex: 1;" class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="col-sm-2 col-xs-2">
+                    <button id="pgn_prepare" title="Prepare Headers" data-toggle="tooltip" data-placement="bottom" style="margin-top:5px;font-size:12px;height:28px;" class="">
+
+                      Prepare
+
+                    </button>
+
+                  </div>
+
+                </div>
+                <div class="row" style="">
+
+                    <div class=" col-sm-12">
+
+                    <div id="pgn_text" style="color:#522;min-height:200px;overflow-y: scroll;margin-top:5px;"><textarea id="pgn_text_area" style="overflow-y:auto; width:96%;height:1000px;" rows="10"></textarea></div>
+
+
+                </div>
+
+                </div>
+                <div class="row" style="margin-top:7px;">
+
+
+
+
+                    <div class="col-sm-3 col-xs-3 col-lg-3" id="save_res1" style="color:#c22;min-height:26px;margin-top:7px;font-size:12px;">Reply:&nbsp;</div>
+                    <div class="col-sm-2 col-xs-2 col-lg-2">
+
+                        <input type="text" id="saveparam" style="width:50px;" value="">
+                    </div>
+                    <div class="col-sm-3 col-xs-3 col-lg-3">
+
+                        <button id="game_dosave_btn" style="width:70px;" class="">
+
+                            Save
+
+                        </button>
+
+                    </div>
+                    <div class="col-sm-2 col-xs-2 col-lg-2">
+                        <button id="game_doclear_btn" style="width:50px;" class=" ">
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+                    <div class="col-sm-2 col-xs-2 col-lg-2">
+                        <button id="game_doclose_btn" style="max-width:50px;" class="  ">
+
+                            Close
+
+                        </button>
+
+                    </div>
+                </div>
+                <div class="row" style="margin-top:5px;">
+                    <div id="after_save_res" class="col-sm-12 col-lg-12"> </div>
+                </div>
+            </div>
+
+
+
+            <div id="board_html" class="col-sm-6 col-lg-4 boardbackc" > <!--"sm-6 col-lg-6 boardbackc">-->
+                <div id="board_html_set" style="display:none;"></div>
+                <div id="board_html_inner">
+
+                    <div class="row">
+
+                        <div class="col-sm-12" id="game_chooserwr">
+
+                            <div class="navigation">
+                                <div class="prevGame">
+                                    <a class="cIcon cIconArrowL previous" href="javascript:prevGame()"></a>
+                                </div>
+
+                                <select id="game_chooser" class="form-control my-input gchooser" style="font-size:16px;width:82%;max-width:330px;"></select>
+                                <div class="nextGame">
+                                    <a class="cIcon cIconArrowR next" href="javascript:nextGame()"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div id="PlayerBlackInMove" class="PMove PBlack" style="display:none; ">
+                            <img id="PlayerBlackInMoveImg" src="/Content/img/BULLET1.GIF" style="">
+                        </div>
+                        <div id="PlayerWhiteInMove" class="PMove PWhite" style="display:none;">
+                            <img id="PlayerWhiteInMoveImg" src="/Content/img/BULLET1.GIF" style="">
+                        </div>
+                        <div class="col-sm-12" id="boardwrap">
+
+                            <div id="board" style="max-width:396px;max-height:396px;margin-left:3px;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div style="height:5px;"></div>
+
+                    <div class="row" style="margin-bottom:5px;">
+
+                        <div class="col-sm-12">
+
+                            <div id="belowBoard0" class="belowB belowBoardG" style="width: 100%; height: 36px;">
+                                <div id="buttons0" class="buttons" style="width: 100%; height: 100%;padding-top:2px;">
+                                 
+
+
+                                    <div class="btn-group dropup" data-toggle="tooltip" title="Actions" data-placement="bottom" style="margin-top:0px;vertical-align:top;margin:0px;" role="group">
+
+                                        <button class="toolMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            <i class="fa fa-cog"></i>
+                                            <span class="caret"></span>
+
+                                        </button>
+                                       
+
+                                        <ul class="dropdown-menu dropdown-menu-left boardbackc">
+
+                                           
+                                            <li><a id="btn_show_hide_notation" href="#"><i class="fa fa-list-ol"></i> &nbsp;<span>Show Notation</span></a></li>
+                                            <li><a id="btn_get_pos_link" href="#"><i class="glyphicon glyphicon-link"></i> &nbsp;Position link</a></li>
+                                           
+                                            <li><a id="btn_flip_board" href="#"><i class="glyphicon glyphicon-sort"></i> &nbsp;Flip Board</a></li>
+                                            <li><a id="btn_save_board" href="#"><i class="glyphicon glyphicon-paperclip"></i> &nbsp;Save Board</a></li>
+                                            <li><a id="btn_save_board_server" href="#"><i class="glyphicon glyphicon-paperclip"></i> &nbsp;Save Board On Server</a></li>
+                                            <li><a id="btn_save_board_serverG" href="#"><i class="glyphicon glyphicon-paperclip"></i> &nbsp;Save G_Board On Server</a></li>
+                                            <li><a id="btn_get_fen" href="#"><i class="fa fa-delicious"></i> &nbsp;Show FEN</a></li>
+                                            <li><a id="btn_get_pgn" href="#"><i class="fa fa-file-text"></i> &nbsp;Show Pgn / YAML</a></li>
+                                           
+                                            <li><a id="btn_set_position" href="#"><i class="fa fa-archive"></i>  &nbsp;Set Position</a></li>
+                                            <li><a id="btn_new_position_game" href="#"><i class="fa fa-archive"></i>  &nbsp;New Position+Game</a></li>
+
+                                            <li><a id="btn_show_game" href="#"><i class="fa fa-archive"></i>  &nbsp;Paste Pgn</a></li>
+                                            <li><a id="btn_update_game" href="#"><i class="fa fa-archive"></i>  &nbsp;Update Pgn in Database</a></li>
+                                            <li><a id="btn_save_game" href="#"><i class="fa fa-download"></i>  &nbsp;Save Pgn To Database</a></li>
+                                            <li><a id="btn_save_list" href="#"><i class="fa fa-download"></i>  &nbsp;New Games List To Database</a></li>
+                                            <li><a id="btn_new_puzzle" href="#"><i class="fa fa-download"></i>  &nbsp;Create new puzzle in Database</a></li>
+                                            <li><a id="tologin" href="#" data-toggle="modal" data-target="#myModalLogin">Login<span class="glyphicon glyphicon-log-in pull-right"></span></a></li>
+                                            <li><a id="tologoff" href="#">Logoff<span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                            <li><a id="exit_chesspm" href="#"><i class="fa  fa-sign-out"></i>  &nbsp;Exit to ChessPM</a></li>
+                                        </ul>
+
+                                    </div>
+
+
+                                    <div class="btn-group dropup" data-toggle="tooltip" title="Play Settings" data-placement="bottom" style="margin-top:0px;vertical-align:top;margin:0px;padding:0px;" role="group">
+
+                                        <button class="toolMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            <i class="fa fa-film"></i>
+                                            <span class="caret"></span>
+
+                                        </button>
+
+
+                                        <ul class="dropdown-menu dropdown-menu-left boardbackc">
+                                          
+                                            <li><a id="btn_replay1" href="#"><i class="fa  fa-play-circle-o"></i>  &nbsp;Replay slow</a></li>
+                                            <li><a id="btn_replayHere" href="#"><i class="fa   fa-location-arrow"></i>  &nbsp;Replay from here</a></li>
+                                            <li><a id="btn_replayAll" href="#"><i class="fa  fa-play-circle"></i>  &nbsp;Replay All</a></li>
+                                            <li><a id="btn_stop" href="#"><i class="fa  fa-stop"></i>  &nbsp;Stop replay</a></li>
+                                            <li><a id="btn_pause" href="#"><i class="fa  fa-pause"></i>  &nbsp;Pause Replay</a></li>
+
+                                    
+                                            <li><a id="btn_slower" href="#"><i class="fa  fa-minus"></i>  &nbsp;Slower</a></li>
+                                            <li><a id="btn_faster" href="#"><i class="fa   fa-plus"></i>  &nbsp;Faster</a></li>
+                                            <li><a id="btn_vel_reg" href="#"><i class="fa   fa-asterisk"></i>  &nbsp;Regular</a></li>
+
+                                            <li><a id="btn_nextgame" href="#"><i class="fa     fa-arrow-down"></i>  &nbsp;Next game</a></li>
+                                            <li><a id="btn_prevgame" href="#"><i class="fa    fa-arrow-up"></i>  &nbsp;Prev game</a></li>
+
+                                            <li><a id="btn_limitmoves" href="#"><i class="fa    fa-ban"></i>  &nbsp;Limit moves 20 On/Off</a></li>
+
+                                            <li><a id="btn_mute" href="#"><i class="fa  fa-microphone"></i>  &nbsp;Mute / Unmute</a></li>
+                                            <li><a id="btn_analyze" href="#"><img width="14" src="./Content/img/glyphicons-626-sauna.png"> &nbsp;Engine Move</a></li>
+                                            <li><a id="btn_man_analyze" href="#"><i class="glyphicon glyphicon-eye-open"></i> &nbsp;Manual Analysis</a></li>
+                                            <li><a id="btn_full_analyze" href="#"><i class="glyphicon glyphicon-eye-open"></i> &nbsp;Analysis full score</a></li>
+                                            <li><a id="btn_full_analyze_sc_5" href="#"><img width="14" src="./Content/img/glyphicons-626-sauna.png"> &nbsp;Analysis main score</a></li>
+                                            <li><a id="btn_full_analyze_pos" href="#"><img width="14" src="./Content/img/glyphicons-626-sauna.png"> &nbsp;Analysis position</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                    <span class="toolBarSep"></span>
+
+                                    <button title="Replay from Start" id="btn_replay" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Autoplay24.png&quot;);"></button>
+                                    <button title="Pause Replay" id="btn_replay_stop" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Stop.png&quot;);display:none;"></button>
+                                    <button title="Continue Replay" id="btn_replay_here" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Autoplay24.png&quot;);display:none;"></button>
+
+
+
+                                    <span class="toolBarSep"></span>
+
+                                    <button title="Take Back" id="btn_prev_move" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Retract24.png&quot;);"></button>
+
+                                    <button title="Next move" id="btn_next_move" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Exec24.png&quot;);"></button>
+
+                                    <span class="toolBarSep"></span>
+
+                                    <button title="To Start" id="btn_initial_position" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/GoBegin24.png&quot;);"></button>
+
+                                    <button title="To End" id="btn_final_position" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/GoEnd24.png&quot;);"></button>
+
+                                    
+                                    <button title="Board Colors" id="btn_colors" class="toolBtn" data-toggle="tooltip" data-placement="bottom" style="background-image: url(&quot;Images/Buttons/Board24_10.png&quot;);"></button>
+
+
+
+                                    <a id="btn_stop_anal" style="text-decoration:none;" href="#"><span id="analWrap"><i class="fa fa-gears" style="display:inline;" title="Start Analysis"></i></span></a>  &nbsp;
+
+
+                         
+
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="overlay" style="visibility:hidden;top:5px;left:7px;z-index:1000000;max-width:200px;max-height:100px;">
+                        <div id="overlayimg">
+
+
+                        </div>
+                    </div>
+
+                    <div class="row" id="engdiv" >
+
+                        <div class="col-sm-12" style="display:inline-block; line-break:auto; text-wrap:normal; word-wrap:break-word; ">
+
+  
+
+                            <div id="analyze_res5" style="display:inline;word-wrap:break-word; color:#c22;min-height:36px;font-size:12px;">&nbsp;</div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="game_html" class="col-sm-6 col-lg-8" >
+                <div id="solvediv" class="notaButtons" style="background-color:#dddddd  ;padding:5px;font-size:15px;margin-bottom:0px;margin-left:5px;font-weight:600;display:none;">
+                    <span id="solvedivspan"></span> &nbsp;
+                    <button id="solvHintBtn" data-toggle="tooltip" data-placement="bottom" title="Show Next Move" class="toolBtn" style="display:none;height:26px;padding-bottom:8px;padding-top:2px !important;padding-left:8px !important;width:28px;background-image: url(&quot;Images/Buttons/Exec24.png&quot;);"></button>
+                    <button id="solvPlayBtn" data-toggle="tooltip" data-placement="bottom" title="Show The Solution" class="toolBtn" style="display:none;height:26px;padding-bottom:8px;padding-top:2px !important;padding-left:8px !important;width:28px;background-image: url(&quot;Images/Buttons/Autoplay24.png&quot;);"></button>
+                    <button id="solvShowBtn" data-toggle="tooltip" data-placement="bottom" title="Show The Notation" class="toolBtn" style="display:none;height:26px;padding-bottom:8px;padding-top:2px !important;padding-left:8px !important;width:28px;background-image: url(&quot;Images/Buttons/List.png&quot;);"></button>
+                </div>
+                <div id="linkhdr" style="font-size:14px;"></div>
+                <div id="timerhdr1">
+                    <div id="game_uptomoves_html" style="z-index:5000;top:0px;left:10px;">
+
+                    </div>
+                    <h2>
+
+                        <span id="WhitePlayer">  </span><span class="elo" id="WhiteElo"></span> <span id="against">  </span>
+                        <span id="BlackPlayer"> </span><span class="elo" id="BlackElo"> </span>
+                        <span class="result" id="result"> </span>
+                        <button id="plhide" title="Hide Header" data-toggle="tooltip" data-placement="bottom"   style="font-size:11px;float:right;height:27px;width:36px;line-height: 20px;">Hide</button>
+                    </h2>
+
+                    <h3 style="max-height : 22px;overflow:hidden; ">
+
+                        <span id="eco" class="ECO">  </span>&nbsp;
+                        <span class="event" id="event"> </span>
+                        <span class="date" id="eventdate"> </span>
+                        <span class="annotator" id="annotator"> </span>
+                    </h3>
+
+                </div>
+                <div id="game_moves_html_wrap">
+                    <div id="game_moves_html_wrap2" style="height: inherit; overflow-y: scroll;overflow-x:hidden; webkit-overflow-scrolling:touch;">
+                        <div id="game_moves_html">
+                            <div id="timer2" class="timer" style="margin:auto;margin-left:30px;">Wait...&nbsp;&nbsp;<img src="./Images/progr24.gif" /></div>
+                        </div>
+                    </div>
+                </div>
+                    <div id="belowNota0" class="belowNota">
+                        <div id="notaButtons0" class="notaButtons">
+    
+                            <button title=" &nbsp;&nbsp;&nbsp; Insert Line" id="btn_insert_line" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/UnFoldAll24.png&quot;);"></button>
+                            <button title="Stop Game Edit" id="btn_stop_edit" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/EditStop224.png&quot;);display:none;"></button>
+                            <button title="Insert Text" id="btn_ins_text" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/Text.png&quot;);"></button>
+   
+                            <div id="btn_dolar" class="btn-group dropup" data-toggle="tooltip" data-placement="top" style="margin-top:0px;vertical-align:top;margin:0px;max-width:30px !important;z-index:1 !important;" role="group">
+                                <button class="toolMenu" title="Insert !?=..." data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="max-width:30px !important;z-index:1 !important;">
+                                   
+                                    <img src="Images/Buttons/icons8-us-dollar-24.png" style="z-index:1 !important;" />
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-menu-left dropdown-menusm boardbackc" style="width:30px;max-width:30px !important; ">
+                                    <li><a href="javascript:sDolar(1)">!</a></li>
+                                    <li><a href="javascript:sDolar(2)">?</a></li>
+                                    <li><a href="javascript:sDolar(3)">‼</a></li>
+                                    <li><a href="javascript:sDolar(4)">??</a></li>
+                                    <li><a href="javascript:sDolar(5)">⁉</a></li>
+                                    <li><a href="javascript:sDolar(6)">⁈</a></li>
+                                    <li><a href="javascript:sDolar(9)">worst move</a></li>
+                                    <li><a href="javascript:sDolar(10)">=</a></li>
+
+                                    <li><a href="javascript:sDolar(12)">Unclear</a></li>
+
+                                    <li><a href="javascript:sDolar(14)">⩲</a></li>
+                                    <li><a href="javascript:sDolar(15)">⩱</a></li>
+
+                                    <li><a href="javascript:sDolar(16)">±</a></li>
+                                    <li><a href="javascript:sDolar(17)">∓</a></li>
+                                    <li><a href="javascript:sDolar(18)">+−</a></li>
+                                    <li><a href="javascript:sDolar(19)">−+</a></li>
+                                </ul>
+
+                            </div>
+
+                            <button title="Insert Diagram" id="btn_ins_diag" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/Board24.png&quot;);"></button>
+
+                        
+                            <button title="Delete Line" id="btn_del_line" class="toolBtn " style="background-image: url(&quot;Images/Buttons/DeleteLine24.png&quot;);"></button>
+                            
+
+
+
+                            <span class="toolBarSep"></span>
+
+                            <button title="Create pgn" id="btn_create_pgn1" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/Notes.png&quot;);"></button>
+
+ 
+
+                            <button title="Refresh" id="btn_refresh_1" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/Rotate24.png&quot;);display:none;"></button>
+
+                            <button title="Show Fen" id="btn_get_fen_1" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/Fen24.png&quot;);"></button>
+
+                            <button title="Share" id="btn_get_pgn_1" data-toggle="tooltip" data-placement="top" class="toolBtn " style="background-image: url(&quot;Images/Buttons/ShareGame24.png&quot;);"></button>
+
+                 
+
+                            <span class="toolBarSep"></span>
+                            <span class="toolBarSep"></span><span class="toolBarSep"></span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+
+
+
+      
+
+        <div id="myModalLogin" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+
+              
+                <div class="modal-content" style="max-width:90% !important;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="modloghdr">Registered User login</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="modaluser"><span class="glyphicon glyphicon-user"></span><span id="modlogus"> Username</span></label>
+                                <input type="text" class="form-control" id="modaluser" autocomplete="off" placeholder="Enter user id">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalpsw"><i class="fa fa-lock"></i><span id="modlogpsw"> Password</span></label>
+                                <input type="text" class="form-control" id="modalpsw" autocomplete="off" placeholder="Enter password">
+                            </div>
+                           
+                         
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnModalForgot" title="Forgot you password ?" class="btn "><span id="usertoforgot1">Password?</span></button>&nbsp;
+                        <button id="btnModalToRegister" title="Not registered ChessPM yet" class="btn "><span id="usertoregister1">New-Register</span></button>&nbsp;
+                     
+
+                        <button id="btnModalLogin" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span>&nbsp;<span id="userlogbtntxt">Login</span></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+     
+
+        <!-- Modal set fen -->
+        <div id="myModalSetFen" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="SetFenHdr">Paste your board FEN here</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;" id="SetFenLab"
+                                       for="inputFen1">FEN</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputFen1" placeholder="" />
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnDoSetFen" type="button" class="btn btn-default" data-dismiss="modal">Set</button>
+                    </div>
+                </div>
+
+            </div>
+            <input type="hidden" id="modalTextHidden" name="modalTextHidden" value="1">
+        </div>
+
+        <!-- Modal set fen -->
+        <div id="myModalSetFenGame" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Paste your board FEN+Game here</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputEvent">Event</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputEvent" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputFen2">FEN</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputFen2" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputWhite">White</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputWhite" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputBlack">Black</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputBlack" placeholder="" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputAnnotator">Annotator</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputAnnotator" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="text-align:center;"
+                                       for="inputMoves">Moves</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           id="inputMoves" placeholder="" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnDoSetFenGame" type="button" class="btn btn-default" data-dismiss="modal">Set</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="myModalSaveBoard" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Save Board to Server</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="gameIdG" class="form-group">
+                            <label class="col-sm-3  col-lg-4  control-label"
+                                   for="gameId">Game Number</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="gameId" />
+                            </div>
+                        </div>
+
+                        <div id="imageTextG" class="form-group">
+                            <label class="col-sm-3  col-lg-4  control-label"
+                                   for="imageText">Text in Image</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="imageText" />
+                            </div>
+                        </div>
+
+                        <div id="title1TextG" class="form-group">
+                            <label class="col-sm-3 col-lg-4 control-label" id="title1TextL"
+                                   for="title1Text">Title 1(35ch)</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="title1Text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 col-lg-4 control-label"
+                                   for="title2Text">Description(65ch)</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="title2Text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 col-lg-4 control-label"
+                                   for="savePassword">Password</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="savePassword" />
+                            </div>
+                        </div>
+
+                        <div id="imageTypeG" class="form-group">
+                            <label class="col-sm-3  col-lg-4 control-label"
+                                   for="imageType">Image type</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <select id="imageType" class="form-control">
+                                    <option value="1" selected="selected">Regular FB</option>
+                                    <option value="2">FB No left</option>
+                                    <option value="3">Border no text with Im</option>
+                                    <option value="4">Border No text no Im</option>
+                                    <option value="5">White Around No text no Im</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div id="imageSizeG" class="form-group">
+                            <label class="col-sm-3  col-lg-4 control-label"
+                                   for="imageSize">Size</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <select id="imageSize" class="form-control">
+                                    <option value="814x426" selected="selected">814x426</option>
+                                    <option value="800x420">800x420</option>
+                                    <option value="812x426">812x426</option>
+                                    <option value="818x426">818x426</option>
+                                    <option value="960x480">960x480</option>
+                                    <option value="1221x639">1221x639</option>
+                                    <option value="1200x630">1200x630</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div id="imageBgrG" class="form-group">
+                            <label class="col-sm-3  col-lg-4 control-label"
+                                   for="imageBgr">Background</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <select id="imageBgr" class="form-control">
+                              
+                                </select>
+                            </div>
+                        </div>
+
+
+                      
+
+                    </div>
+                    <div style="display:none;" id="hidsavetoo"></div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button id="btnSaveImgServer" class="btn btn-primary"><i class="fa fa-user"></i>&nbsp;Save</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div id="myModalSaveBoardList" class="modal fade" role="dialog">
+            <div class="modal-dialog ">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Save Board to Server</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="glistIdG" class="form-group">
+                            <label class="col-sm-3  col-lg-4  control-label"
+                                   for="glistId">List Id</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="glistId" />
+                            </div>
+                        </div>
+                        <div id="glistIdgameG" class="form-group">
+                            <label class="col-sm-3  col-lg-4  control-label"
+                                   for="glistIdgame">Game Number</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="glistIdgame" />
+                            </div>
+                        </div>
+                        <div id="glistIdPrefG" class="form-group">
+                            <label class="col-sm-3  col-lg-4  control-label"
+                                   for="glistIdPref">Prefix</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="glistIdPref" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 col-lg-4 control-label"
+                                   for="savePasswordList">Password</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <input type="text" class="form-control"
+                                       id="savePasswordList" />
+                            </div>
+                        </div>
+
+                        <div id="imageTypeListG" class="form-group">
+                            <label class="col-sm-3  col-lg-4 control-label"
+                                   for="imageTypeList">Image type</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <select id="imageTypeList" class="form-control">
+                                    <option value="10" selected="selected">Regular FB</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="imageBgrListG" class="form-group">
+                            <label class="col-sm-3  col-lg-4 control-label"
+                                   for="imageBgrList">Background</label>
+                            <div class="col-sm-9 col-lg-8 ">
+                                <select id="imageBgrList" class="form-control">
+                             
+                                </select>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div style="display:none;" id="hidsavetooList"></div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button id="btnSaveImgListServer" class="btn btn-primary"><i class="fa fa-user"></i>&nbsp;Save</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    
+
+        <audio id="audio1" controls preload="none" style="display:none;">
+            <source src="./Content/audio/1.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio2" controls preload="none" style="display:none;">
+            <source src="./Content/audio/2.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio3" controls preload="none" style="display:none;">
+            <source src="./Content/audio/3.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio4" controls preload="none" style="display:none;">
+            <source src="./Content/audio/4.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio5" controls preload="none" style="display:none;">
+            <source src="./Content/audio/5.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio6" controls preload="none" style="display:none;">
+            <source src="./Content/audio/6.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio7" controls preload="none" style="display:none;">
+            <source src="./Content/audio/7.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio8" controls preload="none" style="display:none;">
+            <source src="./Content/audio/8.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio0" controls preload="none" style="display:none;">
+            <source src="./Content/audio/0.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioa" controls preload="none" style="display:none;">
+            <source src="./Content/audio/a.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiob" controls preload="none" style="display:none;">
+            <source src="./Content/audio/b.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioc" controls preload="none" style="display:none;">
+            <source src="./Content/audio/c.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiod" controls preload="none" style="display:none;">
+            <source src="./Content/audio/d.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="audioe" controls preload="none" style="display:none;">
+            <source src="./Content/audio/e.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiof" controls preload="none" style="display:none;">
+            <source src="./Content/audio/f.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiog" controls preload="none" style="display:none;">
+            <source src="./Content/audio/g.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioh" controls preload="none" style="display:none;">
+            <source src="./Content/audio/h.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioq" controls preload="none" style="display:none;">
+            <source src="./Content/audio/q.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiok" controls preload="none" style="display:none;">
+            <source src="./Content/audio/k.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audior" controls preload="none" style="display:none;">
+            <source src="./Content/audio/r.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audion" controls preload="none" style="display:none;">
+            <source src="./Content/audio/n.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiox" controls preload="none" style="display:none;">
+            <source src="./Content/audio/x.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioApplause" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Applause.wav" type="audio/wav">
+        </audio>
+        <audio id="audioNEWGAME" controls preload="none" style="display:none;">
+            <source src="./Content/audio/NEWGAME.WAV" type="audio/wav">
+        </audio>
+
+
+
+        <audio id="audioknight" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Knight.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiobishop" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Bishop.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiorook" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Rook.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioqueen" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Queen.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audioking" controls preload="none" style="display:none;">
+            <source src="./Content/audio/King.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiopawn" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Pawn.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiotakes" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Takes.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiodraw" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Draw.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiocastleshort" controls preload="none" style="display:none;">
+            <source src="./Content/audio/CastleShort.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiocastlelong" controls preload="none" style="display:none;">
+            <source src="./Content/audio/CastleLong.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audiocheck" controls preload="none" style="display:none;">
+            <source src="./Content/audio/Check.mp3" type="audio/mp3">
+        </audio>
+    </div> <!--pagecontainer-->
+    <!--<br/>--> 
+   
+</body>
+
+
+</html>
